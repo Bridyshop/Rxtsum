@@ -14,8 +14,8 @@
 #' @examples f.overall_df(iris, Species, c("Sepal.Width", "Sepal.Length"))
 f.overall_df <- function(data,id, col, na.rm = TRUE){
   overall_df <- data %>%
-    summarise_at(.vars = col, .funs = sd, na.rm = na.rm) %>%
-    rename_at(.vars = col, .funs = function(x){paste0("overall_sd.", x)})
+    dplyr::summarise_at(.vars = col, .funs = sd, na.rm = na.rm) %>%
+    dplyr::rename_at(.vars = col, .funs = function(x){paste0("overall_sd.", x)})
   return(overall_df)
 }
 

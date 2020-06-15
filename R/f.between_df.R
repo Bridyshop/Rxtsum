@@ -14,10 +14,10 @@
 #'
 f.between_df <- function(data, id, col, na.rm = TRUE){
   between_df <- data %>%
-    group_by({{ id }}) %>%
-    summarise_at(.vars = col, .funs = mean, na.rm = na.rm) %>%
-    ungroup() %>%
-    summarise_at(.vars = col, .funs = sd, na.rm = na.rm) %>%
-    rename_at(.vars = col, .funs = function(x){paste0("btw_sd.", x)})
+    dplyr::group_by({{ id }}) %>%
+    dplyr::summarise_at(.vars = col, .funs = mean, na.rm = na.rm) %>%
+    dplyr::ungroup() %>%
+    dplyr::summarise_at(.vars = col, .funs = sd, na.rm = na.rm) %>%
+    dplyr::rename_at(.vars = col, .funs = function(x){paste0("btw_sd.", x)})
   return(between_df)
 }

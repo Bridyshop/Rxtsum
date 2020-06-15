@@ -28,4 +28,10 @@ Rxtsum(data, id, col)
 ```
 Where data is a dataframe which can be grouped (for example panel data where the group is the individual), id is the grouping variable, and col is a character vector for which you want the within/between decomposition. Obviously, col have to be numeric.
 
+A simple example:
+```{r, include = TRUE}
+Rxtsum::Rxtsum(iris, Species, c("Sepal.Length", "Sepal.Width"))
+```
+
+
 
