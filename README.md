@@ -1,19 +1,3 @@
----
-title: "Rxtsum"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Rxtsum}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 ```{r setup}
 library(Rxtsum)
 ```
