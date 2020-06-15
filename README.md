@@ -2,6 +2,8 @@
 library(Rxtsum)
 ```
 
+**See vignette for more information**
+
 # A few words about Rxtsum
 
 The package Rxtsum replicates the between/within standard deviation decomposition of Stata's xtsum package. In particular, it follows the procedure described here : http://stephenporter.org/files/xtsum_handout.pdf
