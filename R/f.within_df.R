@@ -13,7 +13,7 @@
 #'
 #' @examples f.within_df(iris, Species, c("Sepal.Width", "Sepal.Length"))
 f.within_df <- function(data, id, col, na.rm = TRUE){
-  id_as_string <- colnames(data %>% select({{ id }}))
+  id_as_string <- colnames(data %>% dplyr::select({{ id }}))
 
   # When called via Rxtsum, id == {{ id }}
   if(stringr::str_detect(id_as_string, pattern = "\\{")){
