@@ -1,22 +1,8 @@
----
-title: "Rxtsum"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Rxtsum}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 ```{r setup}
 library(Rxtsum)
 ```
+
+**See vignette for more information**
 
 # A few words about Rxtsum
 
@@ -28,9 +14,6 @@ Rxtsum(data, id, col)
 ```
 Where data is a dataframe which can be grouped (for example panel data where the group is the individual), id is the grouping variable, and col is a character vector for which you want the within/between decomposition. Obviously, col have to be numeric.
 
-```{r, warning = FALSE}
-library(dplyr)
-```
 
 An overview of the different functions of the packge:
 ```{r, include = TRUE}
